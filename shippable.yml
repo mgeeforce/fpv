@@ -15,15 +15,15 @@ before_install:
 - npm install
 
 before_script:
-- git config --global user.name 'Mike Gee'
-- git config --global user.email 'mgeeforce@gmail.com'
-#- sed -i'' "s~https://github.com/mgeeforce/fpv.git~https://${SHIPPABLE_TOKEN}:x-oauth-basic@github.com/mgeeforce/fpv.git~" _config.yml
+#- git config --global user.name 'Mike Gee'
+#- git config --global user.email 'mgeeforce@gmail.com'
+- sed -i'' "s~https://github.com/mgeeforce/fpv.git~https://${SHIPPABLE_TOKEN}:x-oauth-basic@github.com/mgeeforce/fpv.git~" _config.yml
 - sed -i'' "s~Deployed manually~Deployed by Shippable~" _config.yml
 
 script:
   - hexo generate
   - hexo deploy
   
-#env:
-#  global:
-#  - secure: GswdCEg1JSZW0Dyik/Yjlm31g8lj6926RfCUG+nbqZX0q40vTrFIvLOu8urtDZtWDutI6qfeORW2gHvZ7jasLwPk3nehpzV7kjgwsDF7vFomufs49w9cPcxm+JeyRH507hFb10qdPu+dbFAYBMNBv7epePMVQ1DCST8+myz2VBTQ/VeDx/p7FZE74jAaYUAxiyjkYwLVNxr7hkxYxZd61svF9SvP+BbF+4tt7MUWQIXOtXn07AcHPDkSZIVRUp6A9JqKlpFca6ZAITJazpi94fF5MDguWyOmHeyv2WBKQjammStaYz62Yt7yjfciW1UOHqho8F286XeZNXfi6JSBqQ==
+env:
+  global:
+  - secure: RZfxpsC2hkNL0r9iWj0K7BVcoKQBgnRKEEuzFPqua9Nu30lbXYdAw6HRC/iXiGoq8WMV/en9h5RQK90hHAnTczlpH6aIxCtUTq+Xj8DjRyLdRV7NmW9em+mfzurhe8G0xZ4PmqVz1Vbhmc1mWDDscQi4GeuW4wcbXYu9TGemfhm3GlJoBZgy08EpyqdO2xkXQ7G55T7zLLpk8Car65d6a1jeDfgUHCudtlFrXgzDm6e39dSPIawWKdRj0vjeLYwWOcH6NhJU278MVpFXeOygu778SGLB0M1vN8QMtM82KZKyMY81iVw0t18CMe9taT5lSzD+3mCXYLxNZv+8g2+8Zg==
