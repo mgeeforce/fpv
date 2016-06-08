@@ -72,3 +72,4 @@ deploy:
   repo: https://github.com/mgeeforce/fpv.git
   branch: gh-pages
   message: Deployed manually via hexo at {{ now('YYYY-MM-DD HH:mm:ss') }}
+  
