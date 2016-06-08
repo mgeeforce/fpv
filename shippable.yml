@@ -15,8 +15,8 @@ before_install:
 - npm install
 
 before_script:
-#- git config --global user.name 'Mike Gee'
-#- git config --global user.email 'mgeeforce@gmail.com'
+- git config --global user.name 'Mike Gee'
+- git config --global user.email 'mgeeforce@gmail.com'
 - sed -i'' "s~https://github.com/mgeeforce/fpv.git~https://${SHIPPABLE_TOKEN}:x-oauth-basic@github.com/mgeeforce/fpv.git~" _config.yml
 - sed -i'' "s~Deployed manually~Deployed by Shippable~" _config.yml
 
