@@ -21,8 +21,8 @@ before_script:
 - sed -i'' "s~Deployed manually~Deployed by Shippable~" _config.yml
 
 script:
-  - hexo generate
-  - hexo deploy
+  - hexo generate --debug
+  - hexo deploy --debug
   
 env:
   global:
